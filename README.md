@@ -8,7 +8,7 @@ Graph-based strategy game driven by divide-and-conquer and smart pathfinding alg
 
 ## 🎯 Concept
 
-**Divide & Dominate** is a battle simulation game where countries are represented as nodes in a graph. Players must use algorithmic thinking to launch missile attacks, choose optimal paths, and manage limited resources. The gameplay is driven by classic and advanced algorithms including:
+**Algo Wars** is a battle simulation game where countries are represented as nodes in a graph. Players must use algorithmic thinking to launch missile attacks, choose optimal paths, and manage limited resources. The gameplay is driven by classic and advanced algorithms including:
 
 - 🔁 Divide and Conquer
 - 📍 Dijkstra’s & A* Pathfinding
@@ -30,7 +30,7 @@ Graph-based strategy game driven by divide-and-conquer and smart pathfinding alg
 ## 📁 Project Structure
 
 ```bash
-divide-and-dominate/
+AlgoWars/
 ├── LICENSE
 ├── README.md
 ├── docs/
@@ -60,8 +60,8 @@ divide-and-dominate/
 # 🚀 Getting Started
 ```bash
 # clone the repository
-git clone https://github.com/divide-and-coders/divide-and-dominate.git
-cd divide-and-dominate
+git clone https://github.com/divide-and-coders/AlgoWars.git
+cd Algo_Wars
 
 # (If using Python)
 pip install -r requirements.txt
@@ -72,8 +72,8 @@ python src/main.py
 
 | Name                    | Role                       |
 | ----------------------- | -------------------------- |
-| **Nima Makhmali**       | Lead Architect, Algorithms |
-| **Matin Amirpanah Far** | Game Engine, Map Design    |
+| **Nima Makhmali**       | coming soon   |
+| **Matin Amirpanah Far** | comnig soon   |
 
 # 📄 License
 
