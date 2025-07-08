@@ -1,5 +1,66 @@
 [
     {
-        
+        "name": "Shahab-7",
+        "category": "A1",
+        "max_range": 2500,
+        "uncontrolled_range": 500,
+        "stealth": 3,
+        "damage": 100
+    },
+    {
+        "name": "Hormoz-3",
+        "category": "A2",
+        "max_range": 2500,
+        "uncontrolled_range": 500,
+        "stealth": 2,
+        "damage": 130
+    },
+    {
+        "name": "Segid",
+        "category": "A3",
+        "max_range": 2500,
+        "uncontrolled_range": 500,
+        "stealth": 4,
+        "damage": 25
+    },
+    {
+        "name": "Ghadir-313",
+        "category": "B1",
+        "max_range": 5000,
+        "uncontrolled_range": 500,
+        "stealth": 2,
+        "damage": 90
+    },
+    {
+        "name": "TasooA",
+        "category": "B2",
+        "max_range": 5000,
+        "uncontrolled_range": 500,
+        "stealth": 0,
+        "damage": 300
+    },
+    {
+        "name": "Saeed-1",
+        "category": "C1",
+        "max_range": 3000,
+        "uncontrolled_range": 700,
+        "stealth": 2,
+        "damage": 110
+    },
+    {
+        "name": "Tondar-85",
+        "category": "C",
+        "max_range": 2900,
+        "uncontrolled_range": 900,
+        "stealth": 1,
+        "damage": 10
+    },
+    {
+        "name": "SangarShekan",
+        "category": "D1",
+        "max_range": -1,   
+        "uncontrolled_range": 500,
+        "stealth": 2,
+        "damage": 1488
     }
 ]
