@@ -7,7 +7,7 @@ class City:
         self.y = y
         self.city_type = city_type
         self.defense = defense
-        self.has_py = False  #jassooss
+        self.has_py = False  #jassooss kasif
         
 
         
