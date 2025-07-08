@@ -1,4 +1,4 @@
-#Nima
+# Nima - Fixed version
 import json
 from map.city import City
 
@@ -13,7 +13,8 @@ def load_cities(filepath):
                 x=item['x'],
                 y=item['y'],
                 city_type=item['type'],
-                defense=item['defense']
+                defense=item['defense']  # spelling fixed
             )
+            city.has_spy = item.get('has_spy', False)  # optional
             cities.append(city)
     return cities
