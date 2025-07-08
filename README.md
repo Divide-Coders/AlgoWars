@@ -39,18 +39,43 @@ divide-and-dominate/
 ├── src/
 │   ├── main.py / main.go
 │   ├── game/
-│   │   ├── map_loader.py
-│   │   ├── missile.py
-│   │   ├── country.py
-│   │   └── engine.py
+│   │   ├── .py
+│   │   ├── .py
+│   │   ├── .py
+│   │   └── .py
 │   └── algorithms/
-│       ├── dijkstra.py
-│       ├── a_star.py
-│       ├── divide_and_conquer.py
-│       └── utils.py
+│       ├── .py
+│       ├── .py
+│       ├── .py
+│       └── .py
 ├── assets/
-│   ├── sounds/
+│   ├── /
 │   └── images/
 ├── tests/
 │   └── test_engine.py
 └── requirements.txt / go.mod
+
+```
+
+# 🚀 Getting Started
+```bash
+# clone the repository
+git clone https://github.com/divide-and-coders/divide-and-dominate.git
+cd divide-and-dominate
+
+# (If using Python)
+pip install -r requirements.txt
+python src/main.py
+
+```
+# 👨‍💻 Developers
+
+| Name                    | Role                       |
+| ----------------------- | -------------------------- |
+| **Nima Makhmali**       | Lead Architect, Algorithms |
+| **Matin Amirpanah Far** | Game Engine, Map Design    |
+
+# 📄 License
+
+This project is licensed under the MIT License.
+Feel free to use and extend it with credit.
