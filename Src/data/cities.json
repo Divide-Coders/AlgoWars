@@ -1,5 +1,5 @@
 [
-  {"name": "Hamedan",    "country": "Iran",   "x": 0,  "y": 0,  "type": "base",   "defense": 0},
+  {"name": "Hamedan",    "country": "Iran",   "x": -300,  "y": 0,  "type": "base",   "defense": 0},
 
   {"name": "Isfahan",    "country": "Iran",   "x": 1,  "y": 1,  "type": "normal", "defense": 0},
   {"name": "Tehran" ,    "country": "Iran",   "x": 0,  "y": 0,  "type": "normal", "defense": 0},
@@ -10,6 +10,7 @@
   {"name": "Qom",        "country": "Iran",   "x": 1,  "y": 2,  "type": "normal", "defense": 0},
   {"name": "Boushehr",   "country": "Iran",   "x": 4,  "y": 4,  "type": "normal", "defense": 0},
 
+
   {"name": "TelAviv",    "country": "Israel", "x": 5,  "y": 4,  "type": "enemy",  "defense": 3},
   {"name": "Haifa"  ,    "country": "Israel", "x": 6,  "y": 5,  "type": "enemy",  "defense": 1},
   {"name": "Jerusalem",  "country": "Israel", "x": 5,  "y": 5,  "type": "enemy",  "defense": 2},
@@ -18,4 +19,6 @@
   {"name": "Acre",       "country": "Israel", "x": 5,  "y": 3,  "type": "enemy",  "defense": 1},
   {"name": "Tiberias",   "country": "Israel", "x": 6,  "y": 3,  "type": "enemy",  "defense": 1},
   {"name": "Safed",      "country": "Israel", "x": 6,  "y": 2,  "type": "enemy",  "defense": 1}
+
 ]
+

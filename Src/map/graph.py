@@ -3,7 +3,6 @@ from map.city import City
 from missiles.missile import Missile
 import networkx as nx
 
-
 def build_graph(cities):
     G = nx.Graph()
     for city in cities:

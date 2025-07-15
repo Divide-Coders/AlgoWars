@@ -8,4 +8,5 @@ class City:
         self.city_type = city_type
         self.defense = defense
         self.has_py = False  #jassooss kasif
+
               
