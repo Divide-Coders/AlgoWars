@@ -171,11 +171,11 @@ OUTPUT main.pdf
 INPUT ./main.out
 INPUT ./main.out
 OUTPUT main.out
-INPUT ./image/basu.png
-INPUT ./image/basu.png
-INPUT ./image/basu.png
-INPUT ./image/basu.png
-INPUT ./image/basu.png
+INPUT ./images/basu.png
+INPUT ./images/basu.png
+INPUT ./images/basu.png
+INPUT ./images/basu.png
+INPUT ./images/basu.png
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
