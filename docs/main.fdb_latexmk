@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1752736266.01894 "/home/matin/Archive/University/Algorithm Design/AlgoWars/doc/main.tex" "main.pdf" "main" 1752736267.38577 0
-  "/home/matin/Archive/University/Algorithm Design/AlgoWars/doc/main.tex" 1752736264.61109 2952 5eaded57d046b61b7cc164fc30215448 ""
+["pdflatex"] 1752738796.78029 "/home/matin/Archive/University/Algorithm Design/AlgoWars/doc/main.tex" "main.pdf" "main" 1752738797.8535 0
+  "/home/matin/Archive/University/Algorithm Design/AlgoWars/doc/main.tex" 1752738796.52421 2952 e361501b3d1b200d27cad9eb183b0136 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
@@ -83,10 +83,10 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1745429426 2663956 b661ed1260cf521f2bc62330dfbefeba ""
   "/usr/local/texlive/2025/texmf.cnf" 1742810914.29083 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "images/basu.png" 1745480946.81683 137153 b04a599f45b2b0c5543ca1fcbdc39063 ""
-  "main.aux" 1752736267.32013 1617 dee7df3b6474764f65b81f43afcd8a63 "pdflatex"
-  "main.out" 1752736267.32113 958 4b3b40bae85a63a5512c356f6f26d9e8 "pdflatex"
-  "main.tex" 1752736264.61109 2952 5eaded57d046b61b7cc164fc30215448 ""
-  "main.toc" 1752736267.32213 548 413ae113115a81b894cf7968dada211b "pdflatex"
+  "main.aux" 1752738797.78823 1113 2d103c6b1cd701cb0fda92a76306733e "pdflatex"
+  "main.out" 1752738797.78923 972 dab1503f74735c7ca94179cb53b384bf "pdflatex"
+  "main.tex" 1752738796.52421 2952 e361501b3d1b200d27cad9eb183b0136 ""
+  "main.toc" 1752738797.78923 576 6eb98bf0fe90933bf825a8e5a029b847 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
