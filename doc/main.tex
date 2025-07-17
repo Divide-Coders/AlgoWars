@@ -1,70 +1,95 @@
 % You should not modify anything from here ... -------------
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{report}
 \usepackage[english]{babel}
 \usepackage{microtype,etex,listings,color,parskip}
-\usepackage[margin=2cm]{geometry}
-\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=cyan]{hyperref}
 
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\Huge\color{blue}}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\usepackage{tocloft}
+\usepackage{lipsum}
+\usepackage{microtype}
 
 \lstset{
-  language=Python,
-  inputencoding=utf8,
-  extendedchars=true,
-  tabsize=2,
-  showstringspaces=false,
-  breaklines=true,
-  % basicstyle=\ttfamily,
-  basicstyle=\ttfamily\small,
-  % keywordstyle=\color{blue},
-  keywordstyle=\color[rgb]{0.1,0.3,0.7}\ttfamily,
-  stringstyle=\color[rgb]{0.7,0.1,0.3}\ttfamily,
-  % stringstyle=\color{orange},
-  commentstyle=\color[rgb]{0.3,0.4,0.3}\ttfamily,
-  % commentstyle=\color{gray},
-  columns=fixed,
-  numberstyle=\sffamily\scriptsize,
-  backgroundcolor=\color[rgb]{0.95,0.95,0.95},
-  frame=lines
-  framexleftmargin=5pt,
-  numbers = left,
-  numberstyle = \footnotesize
+    language=Python,
+    inputencoding=utf8,
+    extendedchars=true,
+    tabsize=2,
+    showstringspaces=false,
+    breaklines=true,
+    % basicstyle=\ttfamily,
+    basicstyle=\ttfamily\small,
+    % keywordstyle=\color{blue},
+    keywordstyle=\color[rgb]{0.1,0.3,0.7}\ttfamily,
+    stringstyle=\color[rgb]{0.7,0.1,0.3}\ttfamily,
+    % stringstyle=\color{orange},
+    commentstyle=\color[rgb]{0.3,0.4,0.3}\ttfamily,
+    % commentstyle=\color{gray},
+    columns=fixed,
+    numberstyle=\sffamily\scriptsize,
+    backgroundcolor=\color[rgb]{0.95,0.95,0.95},
+    frame=lines
+    framexleftmargin=5pt,
+    numbers = left,
+    numberstyle = \footnotesize
 }
 % ... until here -------------------------------------------
 
+\begin{document}
 \begin{titlepage}
-	\title{\includegraphics[scale=0.1]{image/basu.png} \\
-   % replace X and XXX with the number and title of the assignment:
-  Assignment X: XXX \\ Programming report}
-	% DO NOT ADD YOUR NAME, only your student numbers:
-  \author{Matin Amirpanahfar 40212358003 \\ \& \\ Nima Makhmali 40212358003}
-  \date{\today}
+    \centering
+    % Optional: Add your university's logo
+    \includegraphics[width=0.2\textwidth]{image/basu.png}\par\vspace{1cm}
+
+    \vspace*{2cm}
+
+    {\Large \textbf{Bu-Ali Sina}}\\[0.5cm]
+    {\large Faculty of Engineering}\\[0.5cm]
+    {\large Department of Computer Engineering}\\[2cm]
+
+    {\Huge \bfseries Design and Analysis of Algorithms}\\[0.5cm]
+    {\LARGE \textbf{Programming Report}}\\[2cm]
+
+    \begin{flushleft}
+        \textbf{Student Name 1:} Matin Amirpanahfar \\
+        \textbf{Student ID 1:} 40212358003 \\[0.5cm]
+
+        \textbf{Student Name 2:} Nima Makhmali \\
+        \textbf{Student ID 2:} 40212358003 \\[0.5cm]
+
+        \textbf{Instructor:} Dr.  \\
+        \textbf{Report Number:} [e.g., Lab 1] \\
+    \end{flushleft}
+    \vfill
+
+    {\large \today}
 \end{titlepage}
 
-\begin{document}
-
-
-
-\maketitle
-
+\tableofcontents
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % NOTE: You MUST read and follow Appendix E of the lecture notes! %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Problem description}
+\chapter{Problem description}
 
 ...
 
-\section{Problem analysis}
+\chapter{Problem analysis}
 
 ...
 
-\section{Program design}
+\chapter{Program design}
 
 ...
 
-\section{Evaluation of the program}
+\chapter{Evaluation of the program}
 
 ...
 
@@ -72,15 +97,15 @@
 %
 % ...
 
-\section{Process description}
+\chapter{Process description}
 
 ...
 
-\section{Conclusions}
+\chapter{Conclusions}
 
 ...
 
-\section{Appendix: program text}
+\chapter{Appendix: program text}
 
 % Here you should include the program text.
 % Do NOT use screenshots or similar methods.
