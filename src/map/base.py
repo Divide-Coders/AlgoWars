@@ -1,6 +1,7 @@
+from simpleCity import SimpleCity
 
 
 #Nima
-class Base:
-    def __init__(self):
-        pass
+class Base(SimpleCity):
+    def __init__(self,name, country, x, y):
+        super().__init__(name, country, x, y)

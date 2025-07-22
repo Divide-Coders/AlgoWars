@@ -33,9 +33,19 @@ Graph-based strategy game driven by divide-and-conquer and smart pathfinding alg
 AlgoWars/
 ├── LICENSE
 ├── README.md
+├── Dockerfile
+├── docker-compose.yml
 ├── docs/
-│   ├── design-doc.md
-│   └── screenshots/
+│   ├── figures
+│   ├── images
+│   │   └── basu.png 
+│   └── main.tex
+├── chapters/
+│   ├── chapter1.tex
+│   └── chapter2.tex
+├── images/
+│   └── diagram.png
+└── README.md
 ├── src/
 │   ├── main.py / main.go
 │   ├── game/
