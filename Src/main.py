@@ -1,5 +1,4 @@
 #Nima 
-
 from data_loader.load_cities import load_cities
 from data_loader.load_missiles import load_missiles
 from map.graph import build_graph

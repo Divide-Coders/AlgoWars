@@ -1,8 +1,7 @@
 [
   {"name": "Hamedan",    "country": "Iran",   "x": -300,  "y": 0,  "type": "base",   "defense": 0},
-
-  {"name": "Isfahan",    "country": "Iran",   "x": 1,  "y": 1,  "type": "normal", "defense": 0},
   {"name": "Tehran" ,    "country": "Iran",   "x": 0,  "y": 0,  "type": "normal", "defense": 0},
+  {"name": "Isfahan",    "country": "Iran",   "x":  0.2531,  "y": -3.0419,  "type": "normal", "defense": 0},
   {"name": "Kermanshah", "country": "Iran",   "x": 2,  "y": 2,  "type": "normal", "defense": 0},
   {"name": "Mashhad",    "country": "Iran",   "x": 3,  "y": 3,  "type": "normal", "defense": 0},
   {"name": "Yazd",       "country": "Iran",   "x": 4,  "y": 4,  "type": "normal", "defense": 0},
@@ -11,14 +10,18 @@
   {"name": "Boushehr",   "country": "Iran",   "x": 4,  "y": 4,  "type": "normal", "defense": 0},
 
 
-  {"name": "TelAviv",    "country": "Israel", "x": 5,  "y": 4,  "type": "enemy",  "defense": 3},
-  {"name": "Haifa"  ,    "country": "Israel", "x": 6,  "y": 5,  "type": "enemy",  "defense": 1},
-  {"name": "Jerusalem",  "country": "Israel", "x": 5,  "y": 5,  "type": "enemy",  "defense": 2},
-  {"name": "Eilat",      "country": "Israel", "x": 7,  "y": 6,  "type": "enemy",  "defense": 1},
-  {"name": "Nazareth",   "country": "Israel", "x": 6,  "y": 4,  "type": "enemy",  "defense": 1},
-  {"name": "Acre",       "country": "Israel", "x": 5,  "y": 3,  "type": "enemy",  "defense": 1},
-  {"name": "Tiberias",   "country": "Israel", "x": 6,  "y": 3,  "type": "enemy",  "defense": 1},
-  {"name": "Safed",      "country": "Israel", "x": 6,  "y": 2,  "type": "enemy",  "defense": 1}
+  {"name": "TelAviv",    "country": "Israel", "x": -16.6409,  "y": -3.6135,  "type": "enemy",  "defense": 3},
+  {"name": "Haifa"  ,    "country": "Israel", "x": -16.4319,  "y": -2.9004,  "type": "enemy",  "defense": 1},
+  {"name": "Jerusalem",  "country": "Israel", "x": -16.2078,  "y": -3.9261,  "type": "enemy",  "defense": 2},
+  {"name": "Eilat",      "country": "Israel", "x": -16.4696,  "y": -6.1367,  "type": "enemy",  "defense": 1},
+  {"name": "Nazareth",   "country": "Israel", "x": -16.1167,  "y": -2.9948,  "type": "enemy",  "defense": 1},
+  {"name": "Acre",       "country": "Israel", "x": -16.3516,  "y": -2.7663,  "type": "enemy",  "defense": 1},
+  {"name": "Tiberias",   "country": "Israel", "x": -15.8903,  "y": -2.9022,  "type": "enemy",  "defense": 1},
+  {"name": "Safed",      "country": "Israel", "x": 6,  "y": 2,  "type": "enemy",  "defense": 1},
+  {"name": "Beersheba",  "country": "Israel", "x": -16.6302,  "y": -4.4426,  "type": "enemy",  "defense": 1},
+  {"name": "",      "country": "Israel", "x": 6,  "y": 2,  "type": "enemy",  "defense": 1},
+  {"name": "",      "country": "Israel", "x": 6,  "y": 2,  "type": "enemy",  "defense": 1},
+  {"name": "",      "country": "Israel", "x": 6,  "y": 2,  "type": "enemy",  "defense": 1}
 
 ]
 
