@@ -1,5 +1,15 @@
+from asyncio import graph
 from map.base_city import BaseCity
 from algorithms.pathfinding import shortest_path
+#from visualizer.plot_attack_paths import plot_attack_paths
+import json
+import os
+
+def save_attack_log(attack_log, scenario_name="scenario_1"):
+    os.makedirs("results", exist_ok=True)
+    with open(f"results/{scenario_name}.json", "w") as f:
+        json.dump(attack_log, f, indent=4)
+   # plot_attack_paths(graph, cities, attack_log)
 
 def run_scenario(cities, 
                  missiles, 
@@ -55,10 +65,13 @@ def run_scenario(cities,
                     "damage": 0,
                     "status": "intercepted"
                 })  
-    print("Attack Summary:")
-    for log in attack_log:
-        d = log.get("damage", 0)
-        status = "Hit" if d > 0 else "Blocked"
-        print(f"{log['from']} → {log['to']} | Path: {' → '.join(log['path'])} | {status} | Damage: {d}")
+        print("Attack Summary:")
+        for log in attack_log:
+            d = log.get("damage", 0)
+            status = "Hit" if d > 0 else "Blocked"
+            print(f"{log['from']} → {log['to']} | Path: {' → '.join(log['path'])} | {status} | Damage: {d}")
+    
+    save_attack_log(attack_log)
+    print(" Results saved to results/scenario_1.json")
 
     print(f"\n Total Damage: {total_damage}")                       
