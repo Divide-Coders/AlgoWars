@@ -1,7 +1,7 @@
 # Nima - Fixed version
 import json
 from map.city import City
-from map.base_city import BaseCity
+from map.baseCity import BaseCity
 from map.EnemyCity import EnemyCity
 
 def load_cities(filepath):
