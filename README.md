@@ -47,20 +47,50 @@ AlgoWars/
 │   └── diagram.png
 └── README.md
 ├── src/
-│   ├── main.py / main.go
-│   ├── game/
+│   ├── main.py
+│   ├── algorithms/
+│   │   ├── heuristics.py
+│   │   ├── pathfinding.py
+│   │   ├── .py
+│   │   └── .py
+│   ├── auxiliary files/
+│   │   ├── distance.py
+│   │   ├── .py
+│   │   ├── .py
+│   │   └── .py
+│   ├── data/
 │   │   ├── .py
 │   │   ├── .py
 │   │   ├── .py
 │   │   └── .py
-│   └── algorithms/
+│   ├── data_loader/
+│   │   ├── .py
+│   │   ├── .py
+│   │   ├── .py
+│   │   └── .py
+│   ├── engine/
+│   │   ├── .py
+│   │   ├── .py
+│   │   ├── .py
+│   │   └── .py
+│   ├── map/
+│   │   ├── .py
+│   │   ├── .py
+│   │   ├── .py
+│   │   └── .py
+│   ├── output/
+│   │   ├── .py
+│   │   ├── .py
+│   │   ├── .py
+│   │   └── .py
+│   └── visualizer/
 │       ├── .py
 │       ├── .py
 │       ├── .py
 │       └── .py
-├── assets/
+├── /
 │   ├── /
-│   └── images/
+│   └── /
 ├── tests/
 │   └── test_engine.py
 └── requirements.txt / go.mod
