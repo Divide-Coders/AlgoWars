@@ -1,6 +1,8 @@
 from map.baseCity import BaseCity
 from algorithms.pathfinding import shortest_path
 from engine.missile_inventory import load_missile_inventory
+import os
+import json
 
 def run_scenario_two(cities, missiles, graph):
     print(" Running Scenario 2...")
