@@ -1,8 +1,9 @@
-#Nima
+from pathlib import Path
 import json
 from missiles.missile import Missile
 
 def load_missiles(filepath):  
+    filepath = Path(filepath)
     missiles = []  
     with open(filepath, 'r') as f:
         data = json.load(f)

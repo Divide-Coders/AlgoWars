@@ -1,4 +1,4 @@
-# Nima - Fixed version
+from pathlib import Path
 import json
 from map.city import City
 from map.baseCity import BaseCity
@@ -6,6 +6,7 @@ from map.EnemyCity import EnemyCity
 
 
 def load_cities(filepath):
+    filepath = Path(filepath)
     cities = []
     with open(filepath, 'r') as f:
         data = json.load(f)
