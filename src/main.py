@@ -32,17 +32,17 @@ sample_missile = missiles[0]  # First missile from list
 path, distance = shortest_path(graph, start_city, target_city, sample_missile.max_range)
 
 if path:
-    print(f" Path found from {start_city} to {target_city}: {' → '.join(path)}")
+    print(f" Path found from {start_city} to {target_city}: {' -> '.join(path)}")
     print(f"    Total distance: {distance:.2f} km")
     if distance > sample_missile.uncontrolled_range:
-        print(f"    Missile exceeds uncontrolled range ({sample_missile.uncontrolled_range} km) — needs reprogramming")
+        print(f"    Missile exceeds uncontrolled range ({sample_missile.uncontrolled_range} km) - needs reprogramming")
     else:
-        print(f"    Within uncontrolled range — no reprogramming needed")
+        print(f"    Within uncontrolled range - no reprogramming needed")
 
     # Check defense
     target_defense = next(c.defense for c in cities if c.name == target_city)
     if sample_missile.stealth > target_defense:
-        print(f"    HIT SUCCESSFUL — Damage: {sample_missile.damage}")
+        print(f"    HIT SUCCESSFUL - Damage: {sample_missile.damage}")
     else:
         print(f"    Intercepted by enemy defense (defense level: {target_defense})")
 else:
