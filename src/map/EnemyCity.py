@@ -1,5 +1,4 @@
-from city import City
+from .city import City
 class EnemyCity(City):
-    def __init__(self,name, country, x, y, defense):
-        super().__init__(name, country, x, y)
-        self.defense = defense
+    def __init__(self, name, country, x, y, defense):
+        super().__init__(name, country, x, y, city_type="enemy", defense_level=defense)

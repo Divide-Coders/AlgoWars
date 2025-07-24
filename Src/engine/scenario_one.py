@@ -1,4 +1,3 @@
-from asyncio import graph
 from map.base_city import BaseCity
 from algorithms.pathfinding import shortest_path
 #from visualizer.plot_attack_paths import plot_attack_paths
@@ -38,7 +37,7 @@ def run_scenario(cities,
             if target.city_type != "enemy":
                 continue
 
-            missile = base.fire_missiles()
+            missile = base.fire_missile()
             if missile is None:
                 break
             path, dist = shortest_path(graph, 
