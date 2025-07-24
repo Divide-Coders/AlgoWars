@@ -4,6 +4,7 @@ from map.city import City
 from map.baseCity import BaseCity
 from map.EnemyCity import EnemyCity
 
+
 def load_cities(filepath):
     cities = []
     with open(filepath, 'r') as f:
