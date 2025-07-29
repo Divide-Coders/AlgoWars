@@ -1,0 +1,225 @@
+{
+    "scenario": "scenario_3",
+    "total_damage": 890,
+    "total_attacks": 18,
+    "successful_attacks": 9,
+    "intercepted_attacks": 9,
+    "attack_details": [
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Ghadir-313",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 90,
+            "status": "success"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Ghadir-313",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 90,
+            "status": "success"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Ghadir-313",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 90,
+            "status": "success"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Ghadir-313",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 90,
+            "status": "success"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Ghadir-313",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 90,
+            "status": "success"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "TasooA",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "TasooA",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "TasooA",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Saeed-1",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 110,
+            "status": "success"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Saeed-1",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 110,
+            "status": "success"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Saeed-1",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 110,
+            "status": "success"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Saeed-1",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 110,
+            "status": "success"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Tondar-85",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Tondar-85",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Tondar-85",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Tondar-85",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Tondar-85",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "missile": "Tondar-85",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "distance": 13.00165578378385,
+            "damage": 0,
+            "status": "intercepted"
+        }
+    ]
+}

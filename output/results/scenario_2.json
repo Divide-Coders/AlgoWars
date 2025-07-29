@@ -1,0 +1,104 @@
+{
+    "scenario": "scenario_2",
+    "total_damage": 380,
+    "total_attacks": 10,
+    "successful_attacks": 5,
+    "intercepted_attacks": 5,
+    "attack_details": [
+        {
+            "from": "Hamedan",
+            "to": "TelAviv",
+            "path": [
+                "Hamedan",
+                "TelAviv"
+            ],
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Haifa",
+            "path": [
+                "Hamedan",
+                "Haifa"
+            ],
+            "damage": 100
+        },
+        {
+            "from": "Hamedan",
+            "to": "Jerusalem",
+            "path": [
+                "Hamedan",
+                "Jerusalem"
+            ],
+            "damage": 100
+        },
+        {
+            "from": "Hamedan",
+            "to": "Eilat",
+            "path": [
+                "Hamedan",
+                "Eilat"
+            ],
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Nazareth",
+            "path": [
+                "Hamedan",
+                "Nazareth"
+            ],
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Acre",
+            "path": [
+                "Hamedan",
+                "Acre"
+            ],
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Tiberias",
+            "path": [
+                "Hamedan",
+                "Tiberias"
+            ],
+            "damage": 0,
+            "status": "intercepted"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Safed",
+            "path": [
+                "Hamedan",
+                "Safed"
+            ],
+            "damage": 130
+        },
+        {
+            "from": "Hamedan",
+            "to": "Beersheba",
+            "path": [
+                "Hamedan",
+                "Beersheba"
+            ],
+            "damage": 25
+        },
+        {
+            "from": "Hamedan",
+            "to": "Rishon_LeZion",
+            "path": [
+                "Hamedan",
+                "Rishon_LeZion"
+            ],
+            "damage": 25
+        }
+    ]
+}

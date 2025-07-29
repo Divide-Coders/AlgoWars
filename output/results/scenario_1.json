@@ -1,0 +1,8 @@
+{
+    "scenario": "scenario_1",
+    "total_damage": 0,
+    "total_attacks": 0,
+    "successful_attacks": 0,
+    "intercepted_attacks": 0,
+    "attack_details": []
+}
