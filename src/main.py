@@ -42,108 +42,133 @@ def visualize_graph_with_attacks(graph, cities, attack_logs, scenario_name):
             if city.name in graph.nodes():
                 pos[city.name] = (city.x, city.y)
 
-        plt.figure(figsize=(12, 8))
+        # Create figure with better styling
+        plt.figure(figsize=(16, 12))
+        plt.style.use('default')
         
-        # Draw the base graph with only existing nodes
-        nx.draw_networkx_nodes(graph, pos, 
-                              node_color='lightblue', 
-                              node_size=500,
-                              alpha=0.7)
-        nx.draw_networkx_edges(graph, pos, 
-                              edge_color='gray', 
-                              alpha=0.3,
-                              width=1)
-        nx.draw_networkx_labels(graph, pos, font_size=8)
+        # Create a subgraph with only nodes that have positions
+        subgraph = graph.subgraph(pos.keys())
+        
+        # Draw the base graph with improved styling
+        nx.draw_networkx_nodes(subgraph, pos, 
+                              node_color='#E8F4FD', 
+                              node_size=800,
+                              alpha=0.8,
+                              edgecolors='#B8D4E3',
+                              linewidths=2)
+        nx.draw_networkx_edges(subgraph, pos, 
+                              edge_color='#D3D3D3', 
+                              alpha=0.4,
+                              width=1.5,
+                              style='solid')
+        nx.draw_networkx_labels(subgraph, pos, font_size=9, font_weight='bold')
 
-        # Color nodes by type (only if they exist in graph)
-        base_cities = [city for city in cities if city.city_type == "base" and city.name in graph.nodes()]
-        enemy_cities = [city for city in cities if city.city_type == "enemy" and city.name in graph.nodes()]
-        normal_cities = [city for city in cities if city.city_type == "normal" and city.name in graph.nodes()]
+        # Color nodes by type with better colors
+        base_cities = [city for city in cities if city.city_type == "base" and city.name in pos]
+        enemy_cities = [city for city in cities if city.city_type == "enemy" and city.name in pos]
+        normal_cities = [city for city in cities if city.city_type == "normal" and city.name in pos]
         
-        # Draw base cities in green
+        # Draw base cities in green with better styling
         base_pos = {city.name: pos[city.name] for city in base_cities}
         if base_pos:
-            nx.draw_networkx_nodes(graph, base_pos, 
-                                  node_color='green', 
-                                  node_size=700,
-                                  alpha=0.8)
+            nx.draw_networkx_nodes(subgraph, base_pos, 
+                                  node_color='#2E8B57', 
+                                  node_size=1000,
+                                  alpha=0.9,
+                                  edgecolors='#1B4D3E',
+                                  linewidths=3)
         
-        # Draw enemy cities in red
+        # Draw enemy cities in red with better styling
         enemy_pos = {city.name: pos[city.name] for city in enemy_cities}
         if enemy_pos:
-            nx.draw_networkx_nodes(graph, enemy_pos, 
-                                  node_color='red', 
-                                  node_size=600,
-                                  alpha=0.8)
+            nx.draw_networkx_nodes(subgraph, enemy_pos, 
+                                  node_color='#DC143C', 
+                                  node_size=900,
+                                  alpha=0.9,
+                                  edgecolors='#8B0000',
+                                  linewidths=3)
         
-        # Draw normal cities in blue
+        # Draw normal cities in blue with better styling
         normal_pos = {city.name: pos[city.name] for city in normal_cities}
         if normal_pos:
-            nx.draw_networkx_nodes(graph, normal_pos, 
-                                  node_color='blue', 
-                                  node_size=500,
-                                  alpha=0.6)
+            nx.draw_networkx_nodes(subgraph, normal_pos, 
+                                  node_color='#4682B4', 
+                                  node_size=700,
+                                  alpha=0.7,
+                                  edgecolors='#2F4F4F',
+                                  linewidths=2)
 
-        # Draw attack paths
+        # Draw attack paths with improved styling
+        successful_attacks = 0
+        intercepted_attacks = 0
+        
         for log in attack_logs:
             path = log.get("path", [])
             if len(path) >= 2:
-                color = 'red' if log.get("damage", 0) > 0 else 'orange'
-                width = 3 if log.get("damage", 0) > 0 else 2
+                damage = log.get("damage", 0)
+                if damage > 0:
+                    color = '#FF4500'  # Orange Red for successful attacks
+                    width = 4
+                    successful_attacks += 1
+                else:
+                    color = '#FFD700'  # Gold for intercepted attacks
+                    width = 3
+                    intercepted_attacks += 1
                 
-                # Draw path edges
+                # Draw path edges with curved lines
                 for i in range(len(path) - 1):
                     u, v = path[i], path[i + 1]
                     if u in pos and v in pos:
-                        nx.draw_networkx_edges(graph, pos, 
+                        nx.draw_networkx_edges(subgraph, pos, 
                                              edgelist=[(u, v)], 
                                              edge_color=color, 
                                              width=width,
                                              alpha=0.8,
-                                             style='dashed')
+                                             style='dashed',
+                                             arrows=True,
+                                             arrowstyle='->',
+                                             arrowsize=15)
 
-        plt.title(f"AlgoWars - {scenario_name}\nAttack Paths Visualization", fontsize=14, fontweight='bold')
+        # Add legend
+        legend_elements = [
+            plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='#2E8B57', 
+                      markersize=15, label='Base Cities', markeredgecolor='#1B4D3E', markeredgewidth=2),
+            plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='#DC143C', 
+                      markersize=15, label='Enemy Cities', markeredgecolor='#8B0000', markeredgewidth=2),
+            plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='#4682B4', 
+                      markersize=12, label='Normal Cities', markeredgecolor='#2F4F4F', markeredgewidth=1),
+            plt.Line2D([0], [0], color='#FF4500', linewidth=4, linestyle='--', 
+                      label=f'Successful Attacks ({successful_attacks})'),
+            plt.Line2D([0], [0], color='#FFD700', linewidth=3, linestyle='--', 
+                      label=f'Intercepted Attacks ({intercepted_attacks})')
+        ]
+        
+        plt.legend(handles=legend_elements, loc='upper left', bbox_to_anchor=(0, 1), 
+                  fontsize=10, frameon=True, fancybox=True, shadow=True)
+
+        # Add title with better styling
+        plt.title(f"AlgoWars - {scenario_name}\nAttack Paths Visualization", 
+                 fontsize=18, fontweight='bold', pad=20, color='#2F4F4F')
+        
+        # Add statistics text
+        total_damage = sum(log.get("damage", 0) for log in attack_logs)
+        stats_text = f"Total Damage: {total_damage:,}\nSuccessful Attacks: {successful_attacks}\nIntercepted Attacks: {intercepted_attacks}"
+        plt.figtext(0.02, 0.02, stats_text, fontsize=12, bbox=dict(boxstyle="round,pad=0.3", 
+                                                                     facecolor="white", alpha=0.8))
+        
         plt.axis("off")
         plt.tight_layout()
         
-        # Save visualization
+        # Save visualization with better quality
         plt.savefig(f"output/visualizations/{scenario_name.lower().replace(' ', '_')}.png", 
-                    dpi=300, bbox_inches='tight')
-        print(f"Visualization saved to: output/visualizations/{scenario_name.lower().replace(' ', '_')}.png")
+                    dpi=300, bbox_inches='tight', facecolor='white', edgecolor='none')
+        print(f"🎨 Beautiful visualization saved to: output/visualizations/{scenario_name.lower().replace(' ', '_')}.png")
         
         plt.show()
         
     except Exception as e:
         print(f"⚠️  Visualization failed for {scenario_name}: {e}")
         print("Continuing without visualization...")
-
-    # Draw attack paths
-    for log in attack_logs:
-        path = log.get("path", [])
-        if len(path) >= 2:
-            color = 'red' if log.get("damage", 0) > 0 else 'orange'
-            width = 3 if log.get("damage", 0) > 0 else 2
-            
-            # Draw path edges
-            for i in range(len(path) - 1):
-                u, v = path[i], path[i + 1]
-                nx.draw_networkx_edges(graph, pos, 
-                                     edgelist=[(u, v)], 
-                                     edge_color=color, 
-                                     width=width,
-                                     alpha=0.8,
-                                     style='dashed')
-
-    plt.title(f"AlgoWars - {scenario_name}\nAttack Paths Visualization", fontsize=14, fontweight='bold')
-    plt.axis("off")
-    plt.tight_layout()
-    
-    # Save visualization
-    plt.savefig(f"output/visualizations/{scenario_name.lower().replace(' ', '_')}.png", 
-                dpi=300, bbox_inches='tight')
-    print(f"Visualization saved to: output/visualizations/{scenario_name.lower().replace(' ', '_')}.png")
-    
-    plt.show()
 
 def print_game_summary(cities, missiles, graph):
     """Print a comprehensive game summary"""

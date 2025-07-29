@@ -1,8 +1,153 @@
 {
     "scenario": "scenario_1",
-    "total_damage": 0,
-    "total_attacks": 0,
-    "successful_attacks": 0,
+    "total_damage": 23808,
+    "total_attacks": 16,
+    "successful_attacks": 16,
     "intercepted_attacks": 0,
-    "attack_details": []
+    "attack_details": [
+        {
+            "from": "Hamedan",
+            "to": "TelAviv",
+            "path": [
+                "Hamedan",
+                "TelAviv"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Hamedan",
+            "to": "Haifa",
+            "path": [
+                "Hamedan",
+                "Haifa"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Tehran",
+            "to": "TelAviv",
+            "path": [
+                "Tehran",
+                "TelAviv"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Tehran",
+            "to": "Haifa",
+            "path": [
+                "Tehran",
+                "Haifa"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Ahvaz",
+            "to": "TelAviv",
+            "path": [
+                "Ahvaz",
+                "TelAviv"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Ahvaz",
+            "to": "Haifa",
+            "path": [
+                "Ahvaz",
+                "Haifa"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Isfahan",
+            "to": "TelAviv",
+            "path": [
+                "Isfahan",
+                "TelAviv"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Isfahan",
+            "to": "Haifa",
+            "path": [
+                "Isfahan",
+                "Haifa"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Kermanshah",
+            "to": "TelAviv",
+            "path": [
+                "Kermanshah",
+                "TelAviv"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Kermanshah",
+            "to": "Haifa",
+            "path": [
+                "Kermanshah",
+                "Haifa"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Yazd",
+            "to": "TelAviv",
+            "path": [
+                "Yazd",
+                "TelAviv"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Yazd",
+            "to": "Haifa",
+            "path": [
+                "Yazd",
+                "Haifa"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Tabriz",
+            "to": "TelAviv",
+            "path": [
+                "Tabriz",
+                "TelAviv"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Tabriz",
+            "to": "Haifa",
+            "path": [
+                "Tabriz",
+                "Haifa"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Ardabil",
+            "to": "TelAviv",
+            "path": [
+                "Ardabil",
+                "TelAviv"
+            ],
+            "damage": 1488
+        },
+        {
+            "from": "Ardabil",
+            "to": "Haifa",
+            "path": [
+                "Ardabil",
+                "Haifa"
+            ],
+            "damage": 1488
+        }
+    ]
 }

@@ -1,223 +1,223 @@
 {
     "scenario": "scenario_3",
-    "total_damage": 670,
+    "total_damage": 890,
     "total_attacks": 18,
-    "successful_attacks": 7,
-    "intercepted_attacks": 11,
+    "successful_attacks": 9,
+    "intercepted_attacks": 9,
     "attack_details": [
         {
             "from": "Hamedan",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Ghadir-313",
             "path": [
                 "Hamedan",
-                "Safed"
+                "TelAviv"
             ],
-            "distance": 13.00165578378385,
+            "distance": 14.222780046460679,
             "damage": 90,
             "status": "success"
         },
         {
             "from": "Hamedan",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Ghadir-313",
             "path": [
                 "Hamedan",
-                "Safed"
+                "TelAviv"
             ],
-            "distance": 13.00165578378385,
+            "distance": 14.222780046460679,
             "damage": 90,
             "status": "success"
         },
         {
             "from": "Hamedan",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Ghadir-313",
             "path": [
                 "Hamedan",
-                "Safed"
+                "TelAviv"
             ],
-            "distance": 13.00165578378385,
+            "distance": 14.222780046460679,
             "damage": 90,
             "status": "success"
         },
         {
             "from": "Tehran",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Ghadir-313",
             "path": [
                 "Tehran",
-                "Safed"
+                "TelAviv"
             ],
-            "distance": 16.103737588522733,
+            "distance": 17.3244743115051,
             "damage": 90,
             "status": "success"
         },
         {
             "from": "Tehran",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Ghadir-313",
             "path": [
                 "Tehran",
-                "Safed"
+                "TelAviv"
             ],
-            "distance": 16.103737588522733,
+            "distance": 17.3244743115051,
             "damage": 90,
             "status": "success"
         },
         {
             "from": "Tehran",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "TasooA",
             "path": [
                 "Tehran",
-                "Safed"
+                "TelAviv"
             ],
-            "distance": 16.103737588522733,
+            "distance": 17.3244743115051,
             "damage": 0,
             "status": "intercepted"
         },
         {
             "from": "Ahvaz",
-            "to": "Tiberias",
+            "to": "TelAviv",
             "missile": "TasooA",
             "path": [
                 "Ahvaz",
-                "Tiberias"
+                "TelAviv"
             ],
-            "distance": 13.220619750979907,
+            "distance": 14.1036060757524,
             "damage": 0,
             "status": "intercepted"
         },
         {
             "from": "Ahvaz",
-            "to": "Tiberias",
+            "to": "TelAviv",
             "missile": "TasooA",
             "path": [
                 "Ahvaz",
-                "Tiberias"
+                "TelAviv"
             ],
-            "distance": 13.220619750979907,
+            "distance": 14.1036060757524,
             "damage": 0,
             "status": "intercepted"
         },
         {
             "from": "Isfahan",
-            "to": "Tiberias",
+            "to": "TelAviv",
             "missile": "Saeed-1",
             "path": [
                 "Isfahan",
-                "Tiberias"
+                "TelAviv"
             ],
-            "distance": 16.144004449020695,
-            "damage": 0,
-            "status": "intercepted"
+            "distance": 17.131736470364,
+            "damage": 110,
+            "status": "success"
         },
         {
             "from": "Isfahan",
-            "to": "Tiberias",
+            "to": "TelAviv",
             "missile": "Saeed-1",
             "path": [
                 "Isfahan",
-                "Tiberias"
+                "TelAviv"
             ],
-            "distance": 16.144004449020695,
-            "damage": 0,
-            "status": "intercepted"
-        },
-        {
-            "from": "Kermanshah",
-            "to": "Safed",
-            "missile": "Saeed-1",
-            "path": [
-                "Kermanshah",
-                "Safed"
-            ],
-            "distance": 11.602103621757564,
+            "distance": 17.131736470364,
             "damage": 110,
             "status": "success"
         },
         {
             "from": "Kermanshah",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Saeed-1",
             "path": [
                 "Kermanshah",
-                "Safed"
+                "TelAviv"
             ],
-            "distance": 11.602103621757564,
+            "distance": 12.77078827715815,
+            "damage": 110,
+            "status": "success"
+        },
+        {
+            "from": "Kermanshah",
+            "to": "TelAviv",
+            "missile": "Saeed-1",
+            "path": [
+                "Kermanshah",
+                "TelAviv"
+            ],
+            "distance": 12.77078827715815,
             "damage": 110,
             "status": "success"
         },
         {
             "from": "Yazd",
-            "to": "Tiberias",
+            "to": "TelAviv",
             "missile": "Tondar-85",
             "path": [
                 "Yazd",
-                "Tiberias"
+                "TelAviv"
             ],
-            "distance": 18.857641209865037,
+            "distance": 19.7978140677197,
             "damage": 0,
             "status": "intercepted"
         },
         {
             "from": "Yazd",
-            "to": "Tiberias",
+            "to": "TelAviv",
             "missile": "Tondar-85",
             "path": [
                 "Yazd",
-                "Tiberias"
+                "TelAviv"
             ],
-            "distance": 18.857641209865037,
+            "distance": 19.7978140677197,
             "damage": 0,
             "status": "intercepted"
         },
         {
             "from": "Tabriz",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Tondar-85",
             "path": [
                 "Tabriz",
-                "Safed"
+                "TelAviv"
             ],
-            "distance": 11.852929595673807,
+            "distance": 13.359424655650407,
             "damage": 0,
             "status": "intercepted"
         },
         {
             "from": "Tabriz",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Tondar-85",
             "path": [
                 "Tabriz",
-                "Safed"
+                "TelAviv"
             ],
-            "distance": 11.852929595673807,
+            "distance": 13.359424655650407,
             "damage": 0,
             "status": "intercepted"
         },
         {
             "from": "Ardabil",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Tondar-85",
             "path": [
                 "Ardabil",
-                "Safed"
+                "TelAviv"
             ],
-            "distance": 13.759122671522338,
+            "distance": 15.218557669503376,
             "damage": 0,
             "status": "intercepted"
         },
         {
             "from": "Ardabil",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Tondar-85",
             "path": [
                 "Ardabil",
-                "Safed"
+                "TelAviv"
             ],
-            "distance": 13.759122671522338,
+            "distance": 15.218557669503376,
             "damage": 0,
             "status": "intercepted"
         }

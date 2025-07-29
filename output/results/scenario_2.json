@@ -1,116 +1,116 @@
 {
     "scenario": "scenario_2",
-    "total_damage": 680,
+    "total_damage": 940,
     "total_attacks": 10,
-    "successful_attacks": 8,
-    "intercepted_attacks": 2,
+    "successful_attacks": 10,
+    "intercepted_attacks": 0,
     "attack_details": [
         {
             "from": "Hamedan",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Shahab-7",
             "path": [
                 "Hamedan",
-                "Safed"
+                "TelAviv"
             ],
             "damage": 100,
             "status": "success"
         },
         {
             "from": "Hamedan",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Shahab-7",
             "path": [
                 "Hamedan",
-                "Safed"
+                "TelAviv"
             ],
             "damage": 100,
             "status": "success"
         },
         {
             "from": "Tehran",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Shahab-7",
             "path": [
                 "Tehran",
-                "Safed"
+                "TelAviv"
             ],
             "damage": 100,
             "status": "success"
         },
         {
             "from": "Tehran",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Shahab-7",
             "path": [
                 "Tehran",
-                "Safed"
+                "TelAviv"
             ],
             "damage": 100,
             "status": "success"
         },
         {
             "from": "Ahvaz",
-            "to": "Tiberias",
+            "to": "TelAviv",
             "missile": "Shahab-7",
             "path": [
                 "Ahvaz",
-                "Tiberias"
+                "TelAviv"
             ],
             "damage": 100,
             "status": "success"
         },
         {
             "from": "Isfahan",
-            "to": "Tiberias",
+            "to": "TelAviv",
             "missile": "Hormoz-3",
             "path": [
                 "Isfahan",
-                "Tiberias"
+                "TelAviv"
             ],
-            "damage": 0,
-            "status": "intercepted"
+            "damage": 130,
+            "status": "success"
         },
         {
             "from": "Kermanshah",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Hormoz-3",
             "path": [
                 "Kermanshah",
-                "Safed"
+                "TelAviv"
             ],
             "damage": 130,
             "status": "success"
         },
         {
             "from": "Yazd",
-            "to": "Tiberias",
+            "to": "TelAviv",
             "missile": "Hormoz-3",
             "path": [
                 "Yazd",
-                "Tiberias"
+                "TelAviv"
             ],
-            "damage": 0,
-            "status": "intercepted"
+            "damage": 130,
+            "status": "success"
         },
         {
             "from": "Tabriz",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Segid",
             "path": [
                 "Tabriz",
-                "Safed"
+                "TelAviv"
             ],
             "damage": 25,
             "status": "success"
         },
         {
             "from": "Ardabil",
-            "to": "Safed",
+            "to": "TelAviv",
             "missile": "Segid",
             "path": [
                 "Ardabil",
-                "Safed"
+                "TelAviv"
             ],
             "damage": 25,
             "status": "success"

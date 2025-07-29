@@ -25,7 +25,7 @@ def run_scenario(cities,
     d_missiles = [m for m in missiles if m.category == "D1"]
     if not d_missiles:
         print("D1 Missile Not Found")
-        return
+        return []  # اصلاح: return لیست خالی
 
     # charge - هر پایگاه دقیقاً دو موشک D1 می‌گیرد
     for base in base_cities:
@@ -81,6 +81,6 @@ def run_scenario(cities,
     save_attack_log(attack_log)
     print(" Results saved to results/scenario_1.json")
 
-    print(f"\n Total Damage: {total_damage}")
+    print(f"\n Total Damage: {total_damage}")                       
     
     return attack_log                       

@@ -20,7 +20,7 @@ def run_scenario_two(cities, missiles, graph):
 
     # توزیع موشک‌های A بین پایگاه‌ها
     a_missiles_all = [m for m in missiles if m.category.startswith("A")]
-    
+
     # ایجاد لیست موشک‌ها بر اساس موجودی
     available_missiles = []
     for m in a_missiles_all:
@@ -50,9 +50,17 @@ def run_scenario_two(cities, missiles, graph):
     intercepted_attacks = 0
 
     print(f"\n=== Starting Attacks ===")
-    
+
     for base in base_cities:
         print(f"\nAttack from {base.name}:")
+        
+        # لیست همه اهداف دشمن با اولویت‌بندی
+        enemy_targets = [city for city in cities if city.city_type == "enemy"]
+        
+        # اولویت‌بندی اهداف: اول اهداف با دفاع کم، سپس اهداف با آسیب بالا
+        enemy_targets.sort(key=lambda x: (x.defense_level, -x.defense_level))  # اول کم‌ترین دفاع
+        
+        target_index = 0
         
         while base.missiles:
             missile = base.fire_missile()
@@ -62,17 +70,19 @@ def run_scenario_two(cities, missiles, graph):
             # انتخاب بهترین هدف برای این موشک
             best_target = None
             best_path = None
-            best_distance = float('inf')
+            best_score = -1
             
-            for target in cities:
-                if target.city_type != "enemy":
-                    continue
-                    
+            for target in enemy_targets:
                 path, distance = shortest_path(graph, base.name, target.name, missile.max_range)
-                if path and distance < best_distance:
-                    best_target = target
-                    best_path = path
-                    best_distance = distance
+                if path:
+                    # محاسبه امتیاز: آسیب احتمالی / (دفاع + 1)
+                    potential_damage = missile.damage if missile.stealth > target.defense_level else 0
+                    score = potential_damage / (target.defense_level + 1)
+                    
+                    if score > best_score:
+                        best_score = score
+                        best_target = target
+                        best_path = path
             
             if best_target and best_path:
                 # بررسی موفقیت حمله
@@ -80,32 +90,32 @@ def run_scenario_two(cities, missiles, graph):
                     damage = missile.damage
                     total_damage += damage
                     successful_attacks += 1
-                    
+                        
                     attack_log.append({
                         "from": base.name,
-                        "to": best_target.name,
-                        "missile": missile.name,
-                        "path": best_path,
-                        "damage": damage,
-                        "status": "success"
+                            "to": best_target.name,
+                            "missile": missile.name,
+                            "path": best_path,
+                            "damage": damage,
+                            "status": "success"
                     })
-                    
-                    print(f"    {missile.name} → {best_target.name} | Damage: {damage}")
+                        
+                    print(f"    {missile.name} → {best_target.name} | Damage: {damage} (Score: {best_score:.1f})")
                 else:
                     intercepted_attacks += 1
                     
                     attack_log.append({
                         "from": base.name,
-                        "to": best_target.name,
-                        "missile": missile.name,
-                        "path": best_path,
+                            "to": best_target.name,
+                            "missile": missile.name,
+                            "path": best_path,
                         "damage": 0,
                         "status": "intercepted"
                     })
-                    
+                        
                     print(f"    {missile.name} → {best_target.name} | Intercepted (Defense: {best_target.defense_level})")
             else:
-                print(f"    {missile.name} | Out of Range")
+                print(f"    {missile.name} | No valid target found")
     
     print(f"\n=== Summary ===")
     print(f"Total Successful Attacks: {successful_attacks}")

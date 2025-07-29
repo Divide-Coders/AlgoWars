@@ -94,22 +94,31 @@ def run_scenario_three(cities, missiles, graph):
     for base in base_cities:
         print(f"\nAttack from {base.name}:")
         
+        # لیست همه اهداف دشمن با اولویت‌بندی
+        # اولویت‌بندی اهداف: اول اهداف با دفاع کم، سپس اهداف با آسیب بالا
+        enemy_cities.sort(key=lambda x: (x.defense_level, -x.defense_level))  # اول کم‌ترین دفاع
+        
         while base.missiles:
             missile = base.fire_missile()
             if missile is None:
                 break
             
-            # Selecting the best target for this missile
+            # انتخاب بهترین هدف برای این موشک
             best_target = None
             best_path = None
-            best_distance = float('inf')
+            best_score = -1
             
             for target in enemy_cities:
                 path, distance = shortest_path(graph, base.name, target.name, missile.max_range)
-                if path and distance < best_distance:
-                    best_target = target
-                    best_path = path
-                    best_distance = distance
+                if path:
+                    # محاسبه امتیاز: آسیب احتمالی / (دفاع + 1)
+                    potential_damage = missile.damage if missile.stealth > target.defense_level else 0
+                    score = potential_damage / (target.defense_level + 1)
+                    
+                    if score > best_score:
+                        best_score = score
+                        best_target = target
+                        best_path = path
             
             if best_target and best_path:
                 # Checking the success of the attack
@@ -123,12 +132,12 @@ def run_scenario_three(cities, missiles, graph):
                         "to": best_target.name,
                         "missile": missile.name,
                         "path": best_path,
-                        "distance": best_distance,
+                        "distance": distance,
                         "damage": damage,
                         "status": "success"
                     })
                     
-                    print(f"    {missile.name} → {best_target.name} | Damage: {damage}")
+                    print(f"    {missile.name} → {best_target.name} | Damage: {damage} (Score: {best_score:.1f})")
                 else:
                     intercepted_attacks += 1
                     
@@ -137,14 +146,14 @@ def run_scenario_three(cities, missiles, graph):
                         "to": best_target.name,
                         "missile": missile.name,
                         "path": best_path,
-                        "distance": best_distance,
+                        "distance": distance,
                         "damage": 0,
                         "status": "intercepted"
                     })
                     
                     print(f"    {missile.name} → {best_target.name} | Intercepted (Defense: {best_target.defense_level})")
             else:
-                print(f"    {missile.name} | Out of Range")
+                print(f"    {missile.name} | No valid target found")
     
     # Summary of results
     print(f"\n=== Summary of Results ===")
