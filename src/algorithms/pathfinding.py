@@ -3,11 +3,11 @@ import networkx as nx
 
 def shortest_path(graph, start, end, max_range):
     try:
-        # ابتدا مسیر کوتاه‌ترین را پیدا می‌کنیم
+        # First we find the shortest path.
         path = nx.dijkstra_path(graph, start, end, weight='weight')
         distance = sum(graph[u][v]['weight'] for u, v in zip(path[:-1], path[1:]))
         
-        # بررسی محدودیت max_range (اگر max_range = -1 باشد، نامحدود است)
+        # Check the max_range limit (if max_range = -1, it's unlimited)
         if max_range == -1 or distance <= max_range:
             return path, distance
         else:

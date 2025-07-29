@@ -25,14 +25,14 @@ def run_scenario(cities,
     d_missiles = [m for m in missiles if m.category == "D1"]
     if not d_missiles:
         print("D1 Missile Not Found")
-        return []  # اصلاح: return لیست خالی
+        return []  # Correct: return empty list
 
-    # charge - هر پایگاه دقیقاً دو موشک D1 می‌گیرد
+    # charge- Each base receives exactly two D1 missiles
     for base in base_cities:
-        # برای هر پایگاه، دو کپی از موشک D1 ایجاد می‌کنیم
+        # For each base, we create two copies of the D1 missile.    
         base_missiles = []
-        for _ in range(2):  # دقیقاً دو موشک
-            base_missiles.append(d_missiles[0])  # همان موشک D1 را دو بار اضافه می‌کنیم
+        for _ in range(2):  # Exactly two missiles
+            base_missiles.append(d_missiles[0])  # Add the same D1 missile twice
         
         base.load_missiles(base_missiles)
         print(f"   {base.name}: {len(base_missiles)} D1 missiles loaded")
@@ -76,7 +76,7 @@ def run_scenario(cities,
         for log in attack_log:
             d = log.get("damage", 0)
             status = "Hit" if d > 0 else "Blocked"
-            print(f"{log['from']} → {log['to']} | Path: {' → '.join(log['path'])} | {status} | Damage: {d}")
+            print(f"{log['from']} ->  {log['to']} | Path: {' -> '.join(log['path'])} | {status} | Damage: {d}")
     
     save_attack_log(attack_log)
     print(" Results saved to results/scenario_1.json")

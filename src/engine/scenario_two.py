@@ -3,6 +3,7 @@ from algorithms.pathfinding import shortest_path
 from engine.missile_inventory import load_missile_inventory
 import os
 import json
+import random
 
 def run_scenario_two(cities, missiles, graph):
     print(" Running Scenario 2...")
@@ -18,26 +19,26 @@ def run_scenario_two(cities, missiles, graph):
 
     print(f"Found {len(base_cities)} bases: {[b.name for b in base_cities]}")
 
-    # توزیع موشک‌های A بین پایگاه‌ها
+    # Distribute A-type missiles between bases
     a_missiles_all = [m for m in missiles if m.category.startswith("A")]
 
-    # ایجاد لیست موشک‌ها بر اساس موجودی
+    # Create a list of missiles based on inventory
     available_missiles = []
     for m in a_missiles_all:
         count = inventory.get(m.category, 0)
         for _ in range(count):
             available_missiles.append(m)
     
-    # توزیع موشک‌ها بین پایگاه‌ها
+    # Distribute missiles between bases
     missiles_per_base = len(available_missiles) // len(base_cities)
     remainder = len(available_missiles) % len(base_cities)
     
     missile_index = 0
     for i, base in enumerate(base_cities):
-        # تعداد موشک برای این پایگاه
+        # Number of missiles for this base
         base_missile_count = missiles_per_base + (1 if i < remainder else 0)
         
-        # تخصیص موشک‌ها به این پایگاه
+        # Assign missiles to this base
         base_missiles = available_missiles[missile_index:missile_index + base_missile_count]
         base.load_missiles(base_missiles)
         missile_index += base_missile_count
@@ -54,66 +55,64 @@ def run_scenario_two(cities, missiles, graph):
     for base in base_cities:
         print(f"\nAttack from {base.name}:")
         
-        # لیست همه اهداف دشمن با اولویت‌بندی
+        # List of all enemy targets
         enemy_targets = [city for city in cities if city.city_type == "enemy"]
         
-        # اولویت‌بندی اهداف: اول اهداف با دفاع کم، سپس اهداف با آسیب بالا
-        enemy_targets.sort(key=lambda x: (x.defense_level, -x.defense_level))  # اول کم‌ترین دفاع
-        
-        target_index = 0
+        # Priority of targets: first targets with low defense, then based on distance
+        enemy_targets.sort(key=lambda x: (x.defense_level, 0))  # First lowest defense
         
         while base.missiles:
             missile = base.fire_missile()
             if missile is None:
                 break
             
-            # انتخاب بهترین هدف برای این موشک
+            # Select the best target for this missile
             best_target = None
             best_path = None
             best_score = -1
             
+            # List of available targets
+            available_targets = []
             for target in enemy_targets:
                 path, distance = shortest_path(graph, base.name, target.name, missile.max_range)
                 if path:
-                    # محاسبه امتیاز: آسیب احتمالی / (دفاع + 1)
-                    potential_damage = missile.damage if missile.stealth > target.defense_level else 0
-                    score = potential_damage / (target.defense_level + 1)
-                    
-                    if score > best_score:
-                        best_score = score
-                        best_target = target
-                        best_path = path
+                    available_targets.append((target, path, distance))
             
-            if best_target and best_path:
-                # بررسی موفقیت حمله
-                if missile.stealth > best_target.defense_level:
+            if available_targets:
+                # Randomly select the top 3 targets
+                available_targets.sort(key=lambda x: x[2])  # Based on distance
+                top_targets = available_targets[:min(3, len(available_targets))]
+                selected_target, selected_path, selected_distance = random.choice(top_targets)
+                
+                # Check the success of the attack
+                if missile.stealth > selected_target.defense_level:
                     damage = missile.damage
                     total_damage += damage
                     successful_attacks += 1
                         
                     attack_log.append({
                         "from": base.name,
-                            "to": best_target.name,
+                            "to": selected_target.name,
                             "missile": missile.name,
-                            "path": best_path,
+                            "path": selected_path,
                             "damage": damage,
                             "status": "success"
                     })
                         
-                    print(f"    {missile.name} → {best_target.name} | Damage: {damage} (Score: {best_score:.1f})")
+                    print(f"    {missile.name} -> {selected_target.name} | Damage: {damage}")
                 else:
                     intercepted_attacks += 1
                     
                     attack_log.append({
                         "from": base.name,
-                            "to": best_target.name,
+                            "to": selected_target.name,
                             "missile": missile.name,
-                            "path": best_path,
+                            "path": selected_path,
                         "damage": 0,
                         "status": "intercepted"
                     })
                         
-                    print(f"    {missile.name} → {best_target.name} | Intercepted (Defense: {best_target.defense_level})")
+                    print(f"    {missile.name} -> {selected_target.name} | Intercepted (Defense: {selected_target.defense_level})")
             else:
                 print(f"    {missile.name} | No valid target found")
     
