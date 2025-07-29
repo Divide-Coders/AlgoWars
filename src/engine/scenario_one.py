@@ -22,14 +22,20 @@ def run_scenario(cities,
             base_cities.append(b)
 
     # sangar shekan  yeahhh buddy
-    d = [m for m in missiles if m.category == "D1"]
-    if not d:
+    d_missiles = [m for m in missiles if m.category == "D1"]
+    if not d_missiles:
         print("D1 Missile Not Found")
         return
 
-    # charge
+    # charge - هر پایگاه دقیقاً دو موشک D1 می‌گیرد
     for base in base_cities:
-        base.load_missiles(d)
+        # برای هر پایگاه، دو کپی از موشک D1 ایجاد می‌کنیم
+        base_missiles = []
+        for _ in range(2):  # دقیقاً دو موشک
+            base_missiles.append(d_missiles[0])  # همان موشک D1 را دو بار اضافه می‌کنیم
+        
+        base.load_missiles(base_missiles)
+        print(f"   {base.name}: {len(base_missiles)} D1 missiles loaded")
 
     total_damage = 0
     attack_log = []

@@ -1,104 +1,119 @@
 {
     "scenario": "scenario_2",
-    "total_damage": 380,
+    "total_damage": 680,
     "total_attacks": 10,
-    "successful_attacks": 5,
-    "intercepted_attacks": 5,
+    "successful_attacks": 8,
+    "intercepted_attacks": 2,
     "attack_details": [
         {
             "from": "Hamedan",
-            "to": "TelAviv",
+            "to": "Safed",
+            "missile": "Shahab-7",
             "path": [
                 "Hamedan",
-                "TelAviv"
+                "Safed"
             ],
-            "damage": 0,
-            "status": "intercepted"
+            "damage": 100,
+            "status": "success"
         },
         {
             "from": "Hamedan",
-            "to": "Haifa",
+            "to": "Safed",
+            "missile": "Shahab-7",
             "path": [
                 "Hamedan",
-                "Haifa"
+                "Safed"
             ],
-            "damage": 100
+            "damage": 100,
+            "status": "success"
         },
         {
-            "from": "Hamedan",
-            "to": "Jerusalem",
+            "from": "Tehran",
+            "to": "Safed",
+            "missile": "Shahab-7",
             "path": [
-                "Hamedan",
-                "Jerusalem"
+                "Tehran",
+                "Safed"
             ],
-            "damage": 100
+            "damage": 100,
+            "status": "success"
         },
         {
-            "from": "Hamedan",
-            "to": "Eilat",
+            "from": "Tehran",
+            "to": "Safed",
+            "missile": "Shahab-7",
             "path": [
-                "Hamedan",
-                "Eilat"
+                "Tehran",
+                "Safed"
             ],
-            "damage": 0,
-            "status": "intercepted"
+            "damage": 100,
+            "status": "success"
         },
         {
-            "from": "Hamedan",
-            "to": "Nazareth",
-            "path": [
-                "Hamedan",
-                "Nazareth"
-            ],
-            "damage": 0,
-            "status": "intercepted"
-        },
-        {
-            "from": "Hamedan",
-            "to": "Acre",
-            "path": [
-                "Hamedan",
-                "Acre"
-            ],
-            "damage": 0,
-            "status": "intercepted"
-        },
-        {
-            "from": "Hamedan",
+            "from": "Ahvaz",
             "to": "Tiberias",
+            "missile": "Shahab-7",
             "path": [
-                "Hamedan",
+                "Ahvaz",
+                "Tiberias"
+            ],
+            "damage": 100,
+            "status": "success"
+        },
+        {
+            "from": "Isfahan",
+            "to": "Tiberias",
+            "missile": "Hormoz-3",
+            "path": [
+                "Isfahan",
                 "Tiberias"
             ],
             "damage": 0,
             "status": "intercepted"
         },
         {
-            "from": "Hamedan",
+            "from": "Kermanshah",
             "to": "Safed",
+            "missile": "Hormoz-3",
             "path": [
-                "Hamedan",
+                "Kermanshah",
                 "Safed"
             ],
-            "damage": 130
+            "damage": 130,
+            "status": "success"
         },
         {
-            "from": "Hamedan",
-            "to": "Beersheba",
+            "from": "Yazd",
+            "to": "Tiberias",
+            "missile": "Hormoz-3",
             "path": [
-                "Hamedan",
-                "Beersheba"
+                "Yazd",
+                "Tiberias"
             ],
-            "damage": 25
+            "damage": 0,
+            "status": "intercepted"
         },
         {
-            "from": "Hamedan",
-            "to": "Rishon_LeZion",
+            "from": "Tabriz",
+            "to": "Safed",
+            "missile": "Segid",
             "path": [
-                "Hamedan",
-                "Rishon_LeZion"
+                "Tabriz",
+                "Safed"
             ],
-            "damage": 25
+            "damage": 25,
+            "status": "success"
+        },
+        {
+            "from": "Ardabil",
+            "to": "Safed",
+            "missile": "Segid",
+            "path": [
+                "Ardabil",
+                "Safed"
+            ],
+            "damage": 25,
+            "status": "success"
         }
     ]
 }
