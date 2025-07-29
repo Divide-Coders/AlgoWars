@@ -7,7 +7,7 @@ import json
 def run_scenario_two(cities, missiles, graph):
     print(" Running Scenario 2...")
 
-    inventory = load_missile_inventory("data/scenarios/scenario_2_missiles.json")
+    inventory = load_missile_inventory("src/engine/scenario_2_missiles.json")
 
     base_cities = []
     for c in cities:
@@ -67,4 +67,4 @@ def run_scenario_two(cities, missiles, graph):
 
     print(" Scenario 2 Complete.")
     print(f" Total Damage: {total_damage}")
-    return attack_log
+    return attack_log, total_damage

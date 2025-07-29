@@ -14,7 +14,7 @@ def save_attack_log(attack_log, scenario_name="scenario_1"):
 
 def run_scenario(cities, 
                  missiles, 
-                 graph) -> None:
+                 graph):
     base_cities = []
     for c in cities:
         if c.city_type == "base":
@@ -75,4 +75,6 @@ def run_scenario(cities,
     save_attack_log(attack_log)
     print(" Results saved to results/scenario_1.json")
 
-    print(f"\n Total Damage: {total_damage}")                       
+    print(f"\n Total Damage: {total_damage}")
+    
+    return attack_log                       
