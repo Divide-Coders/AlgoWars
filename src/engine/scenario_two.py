@@ -16,7 +16,13 @@ def run_scenario_two(cities, missiles, graph):
             base_cities.append(base)
 
     a_missiles_all = [m for m in missiles if m.category.startswith("A")]
+   # b_missiles_all = [m for m in missiles if m.category.startswith("B")]
 
+    a_missiles_to_use = []
+    for m in a_missiles_all:
+        count = inventory.get(m.category, 0)
+        for _ in range(count):
+            a_missiles_to_use.append(m)
 
     missiles_to_use = []
     for m in a_missiles_all:

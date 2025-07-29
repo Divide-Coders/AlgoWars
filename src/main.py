@@ -4,6 +4,7 @@ from data_loader.load_missiles import load_missiles
 from map.graph import build_graph
 from algorithms.pathfinding import shortest_path
 from engine.scenario_one import run_scenario as run_scenario_one
+from engine.scenario_three import run_scenario_three
 
 # - Load Cities -
 cities = load_cities("data/cities.json")
@@ -51,5 +52,8 @@ else:
 
 print("\n--- Running Scenario 1 ---")
 run_scenario_one(cities, missiles, graph)
+
+print("\n--- Running Scenario 3 ---")
+run_scenario_three(cities, missiles, graph)
 
     # Yeeaah Buuuuudddyyyyyyyyyyyyyyy
