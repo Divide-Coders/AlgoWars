@@ -14,7 +14,7 @@ def save_attack_log(attack_log, scenario_name="scenario_1"):
 
 def run_scenario(cities, 
                  missiles, 
-                 graph) -> None:
+                 graph):
     base_cities = []
     for c in cities:
         if c.city_type == "base":
@@ -22,14 +22,20 @@ def run_scenario(cities,
             base_cities.append(b)
 
     # sangar shekan  yeahhh buddy
-    d = [m for m in missiles if m.category == "D1"]
-    if not d:
+    d_missiles = [m for m in missiles if m.category == "D1"]
+    if not d_missiles:
         print("D1 Missile Not Found")
-        return
+        return []  # Correct: return empty list
 
-    # charge
+    # charge- Each base receives exactly two D1 missiles
     for base in base_cities:
-        base.load_missiles(d)
+        # For each base, we create two copies of the D1 missile.    
+        base_missiles = []
+        for _ in range(2):  # Exactly two missiles
+            base_missiles.append(d_missiles[0])  # Add the same D1 missile twice
+        
+        base.load_missiles(base_missiles)
+        print(f"   {base.name}: {len(base_missiles)} D1 missiles loaded")
 
     total_damage = 0
     attack_log = []
@@ -70,9 +76,11 @@ def run_scenario(cities,
         for log in attack_log:
             d = log.get("damage", 0)
             status = "Hit" if d > 0 else "Blocked"
-            print(f"{log['from']} → {log['to']} | Path: {' → '.join(log['path'])} | {status} | Damage: {d}")
+            print(f"{log['from']} ->  {log['to']} | Path: {' -> '.join(log['path'])} | {status} | Damage: {d}")
     
     save_attack_log(attack_log)
     print(" Results saved to results/scenario_1.json")
 
     print(f"\n Total Damage: {total_damage}")                       
+    
+    return attack_log                       

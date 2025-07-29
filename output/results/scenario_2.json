@@ -1,0 +1,119 @@
+{
+    "scenario": "scenario_2",
+    "total_damage": 940,
+    "total_attacks": 10,
+    "successful_attacks": 10,
+    "intercepted_attacks": 0,
+    "attack_details": [
+        {
+            "from": "Hamedan",
+            "to": "Nazareth",
+            "missile": "Shahab-7",
+            "path": [
+                "Hamedan",
+                "Nazareth"
+            ],
+            "damage": 100,
+            "status": "success"
+        },
+        {
+            "from": "Hamedan",
+            "to": "Tiberias",
+            "missile": "Shahab-7",
+            "path": [
+                "Hamedan",
+                "Tiberias"
+            ],
+            "damage": 100,
+            "status": "success"
+        },
+        {
+            "from": "Tehran",
+            "to": "Tiberias",
+            "missile": "Shahab-7",
+            "path": [
+                "Tehran",
+                "Tiberias"
+            ],
+            "damage": 100,
+            "status": "success"
+        },
+        {
+            "from": "Tehran",
+            "to": "Tiberias",
+            "missile": "Shahab-7",
+            "path": [
+                "Tehran",
+                "Tiberias"
+            ],
+            "damage": 100,
+            "status": "success"
+        },
+        {
+            "from": "Ahvaz",
+            "to": "Safed",
+            "missile": "Shahab-7",
+            "path": [
+                "Ahvaz",
+                "Safed"
+            ],
+            "damage": 100,
+            "status": "success"
+        },
+        {
+            "from": "Isfahan",
+            "to": "Safed",
+            "missile": "Hormoz-3",
+            "path": [
+                "Isfahan",
+                "Safed"
+            ],
+            "damage": 130,
+            "status": "success"
+        },
+        {
+            "from": "Kermanshah",
+            "to": "Tiberias",
+            "missile": "Hormoz-3",
+            "path": [
+                "Kermanshah",
+                "Tiberias"
+            ],
+            "damage": 130,
+            "status": "success"
+        },
+        {
+            "from": "Yazd",
+            "to": "Safed",
+            "missile": "Hormoz-3",
+            "path": [
+                "Yazd",
+                "Safed"
+            ],
+            "damage": 130,
+            "status": "success"
+        },
+        {
+            "from": "Tabriz",
+            "to": "Safed",
+            "missile": "Segid",
+            "path": [
+                "Tabriz",
+                "Safed"
+            ],
+            "damage": 25,
+            "status": "success"
+        },
+        {
+            "from": "Ardabil",
+            "to": "Nazareth",
+            "missile": "Segid",
+            "path": [
+                "Ardabil",
+                "Nazareth"
+            ],
+            "damage": 25,
+            "status": "success"
+        }
+    ]
+}
