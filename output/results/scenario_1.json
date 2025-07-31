@@ -1,153 +1,105 @@
 {
     "scenario": "scenario_1",
-    "total_damage": 23808,
-    "total_attacks": 16,
-    "successful_attacks": 16,
+    "total_damage": 11904,
+    "total_attacks": 8,
+    "successful_attacks": 8,
     "intercepted_attacks": 0,
     "attack_details": [
         {
-            "from": "Hamedan",
-            "to": "TelAviv",
+            "from": "Tehran",
+            "to": "Jerusalem",
             "path": [
-                "Hamedan",
-                "TelAviv"
+                "Tehran",
+                "Jerusalem"
             ],
-            "damage": 1488
-        },
-        {
-            "from": "Hamedan",
-            "to": "Haifa",
-            "path": [
-                "Hamedan",
-                "Haifa"
-            ],
-            "damage": 1488
+            "damage": 1488,
+            "status": "Hit",
+            "missile_stealth": 2,
+            "target_defense": 1
         },
         {
             "from": "Tehran",
-            "to": "TelAviv",
+            "to": "Eilat",
             "path": [
                 "Tehran",
-                "TelAviv"
+                "Eilat"
             ],
-            "damage": 1488
-        },
-        {
-            "from": "Tehran",
-            "to": "Haifa",
-            "path": [
-                "Tehran",
-                "Haifa"
-            ],
-            "damage": 1488
-        },
-        {
-            "from": "Ahvaz",
-            "to": "TelAviv",
-            "path": [
-                "Ahvaz",
-                "TelAviv"
-            ],
-            "damage": 1488
-        },
-        {
-            "from": "Ahvaz",
-            "to": "Haifa",
-            "path": [
-                "Ahvaz",
-                "Haifa"
-            ],
-            "damage": 1488
+            "damage": 1488,
+            "status": "Hit",
+            "missile_stealth": 2,
+            "target_defense": 1
         },
         {
             "from": "Isfahan",
-            "to": "TelAviv",
+            "to": "Jerusalem",
             "path": [
                 "Isfahan",
-                "TelAviv"
+                "Jerusalem"
             ],
-            "damage": 1488
+            "damage": 1488,
+            "status": "Hit",
+            "missile_stealth": 2,
+            "target_defense": 1
         },
         {
             "from": "Isfahan",
-            "to": "Haifa",
+            "to": "Eilat",
             "path": [
                 "Isfahan",
-                "Haifa"
+                "Eilat"
             ],
-            "damage": 1488
+            "damage": 1488,
+            "status": "Hit",
+            "missile_stealth": 2,
+            "target_defense": 1
         },
         {
-            "from": "Kermanshah",
-            "to": "TelAviv",
+            "from": "Mashhad",
+            "to": "Jerusalem",
             "path": [
-                "Kermanshah",
-                "TelAviv"
+                "Mashhad",
+                "Jerusalem"
             ],
-            "damage": 1488
+            "damage": 1488,
+            "status": "Hit",
+            "missile_stealth": 2,
+            "target_defense": 1
         },
         {
-            "from": "Kermanshah",
-            "to": "Haifa",
+            "from": "Mashhad",
+            "to": "Eilat",
             "path": [
-                "Kermanshah",
-                "Haifa"
+                "Mashhad",
+                "Eilat"
             ],
-            "damage": 1488
-        },
-        {
-            "from": "Yazd",
-            "to": "TelAviv",
-            "path": [
-                "Yazd",
-                "TelAviv"
-            ],
-            "damage": 1488
-        },
-        {
-            "from": "Yazd",
-            "to": "Haifa",
-            "path": [
-                "Yazd",
-                "Haifa"
-            ],
-            "damage": 1488
+            "damage": 1488,
+            "status": "Hit",
+            "missile_stealth": 2,
+            "target_defense": 1
         },
         {
             "from": "Tabriz",
-            "to": "TelAviv",
+            "to": "Jerusalem",
             "path": [
                 "Tabriz",
-                "TelAviv"
+                "Jerusalem"
             ],
-            "damage": 1488
+            "damage": 1488,
+            "status": "Hit",
+            "missile_stealth": 2,
+            "target_defense": 1
         },
         {
             "from": "Tabriz",
-            "to": "Haifa",
+            "to": "Eilat",
             "path": [
                 "Tabriz",
-                "Haifa"
+                "Eilat"
             ],
-            "damage": 1488
-        },
-        {
-            "from": "Ardabil",
-            "to": "TelAviv",
-            "path": [
-                "Ardabil",
-                "TelAviv"
-            ],
-            "damage": 1488
-        },
-        {
-            "from": "Ardabil",
-            "to": "Haifa",
-            "path": [
-                "Ardabil",
-                "Haifa"
-            ],
-            "damage": 1488
+            "damage": 1488,
+            "status": "Hit",
+            "missile_stealth": 2,
+            "target_defense": 1
         }
     ]
 }
