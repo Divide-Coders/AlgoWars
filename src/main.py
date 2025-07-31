@@ -247,39 +247,65 @@ def main():
         print(" Scenario 1 returned no results")
     save_scenario_results("scenario_1", attack_log_1, sum(log.get("damage", 0) for log in attack_log_1))
     visualize_graph_with_attacks(graph, cities, attack_log_1, "Scenario 1")
-    
+    '''
     # Scenario 2
     print("\n SCENARIO 2: Limited Inventory")
     print("-" * 40)
     attack_log_2, total_damage_2 = run_scenario_two(cities, missiles, graph)
     save_scenario_results("scenario_2", attack_log_2, total_damage_2)
     visualize_graph_with_attacks(graph, cities, attack_log_2, "Scenario 2")
-    
+    '''
+    '''
     # Scenario 3
     print("\n SCENARIO 3: Command & Control")
     print("-" * 40)
     attack_log_3, total_damage_3 = run_scenario_three(cities, missiles, graph)
     save_scenario_results("scenario_3", attack_log_3, total_damage_3)
     visualize_graph_with_attacks(graph, cities, attack_log_3, "Scenario 3")
-    
+    '''
+    '''
+    # Scenario 4
+    print("\n📋 SCENARIO 4: All-out Attack")
+    print("-" * 40)
+    from src.engine.scenario_four import run_scenario_four
+    attack_log_4, total_damage_4 = run_scenario_four(cities, missiles, graph)
+    save_scenario_results("scenario_4", attack_log_4, total_damage_4)
+    visualize_graph_with_attacks(graph, cities, attack_log_4, "Scenario 4")
+    '''
+    '''
+    # Scenario 5
+    print("\n📋 SCENARIO 5: Five Nights with Ferdin")
+    print("-" * 40)
+    from engine.scenario_five import run_scenario_five
+    attack_log_5, total_damage_5 = run_scenario_five(cities, missiles, graph)
+    save_scenario_results("scenario_5", attack_log_5, total_damage_5)
+    visualize_graph_with_attacks(graph, cities, attack_log_5, "Scenario 5")
+    '''
     # Final Summary
     print("\n" + "=" * 60)
-    print(" FINAL RESULTS SUMMARY")
+    print("🏆 FINAL RESULTS SUMMARY")
     print("=" * 60)
     
     total_damage_1 = sum(log.get("damage", 0) for log in attack_log_1)
     successful_1 = len([log for log in attack_log_1 if log.get("damage", 0) > 0])
     successful_2 = len([log for log in attack_log_2 if log.get("damage", 0) > 0])
     successful_3 = len([log for log in attack_log_3 if log.get("damage", 0) > 0])
-    
+    successful_4 = len([log for log in attack_log_4 if log.get("damage", 0) > 0])
+    successful_5 = len([log for log in attack_log_5 if log.get("damage", 0) > 0])
+
     print(f"Scenario 1: {total_damage_1} damage | {successful_1} successful attacks")
     print(f"Scenario 2: {total_damage_2} damage | {successful_2} successful attacks")
     print(f"Scenario 3: {total_damage_3} damage | {successful_3} successful attacks")
+    print(f"Scenario 4: {total_damage_4} damage | {successful_4} successful attacks")
+    print(f"Scenario 5: {total_damage_5} damage | {successful_5} successful attacks")
     
-    best_scenario = max([(total_damage_1, "Scenario 1"), 
-                        (total_damage_2, "Scenario 2"), 
-                        (total_damage_3, "Scenario 3")], 
-                       key=lambda x: x[0])
+    best_scenario = max([
+        (total_damage_1, "Scenario 1"), 
+        (total_damage_2, "Scenario 2"), 
+        (total_damage_3, "Scenario 3"),
+        (total_damage_4, "Scenario 4"),
+        (total_damage_5, "Scenario 5")], 
+        key=lambda x: x[0])
     
     print(f"\n Best Performing Scenario: {best_scenario[1]} ({best_scenario[0]} damage)")
     print(f" All results saved in: output/results/")
