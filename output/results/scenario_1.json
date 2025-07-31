@@ -1,45 +1,48 @@
 {
     "scenario": "scenario_1",
-    "total_damage": 11904,
-    "total_attacks": 8,
-    "successful_attacks": 8,
+    "total_damage": 8928,
+    "total_attacks": 6,
+    "successful_attacks": 6,
     "intercepted_attacks": 0,
     "attack_details": [
         {
-            "from": "Tehran",
-            "to": "Jerusalem",
+            "from": "Ahvaz",
+            "to": "Haifa",
             "path": [
-                "Tehran",
-                "Jerusalem"
+                "Ahvaz",
+                "Haifa"
             ],
             "damage": 1488,
             "status": "Hit",
             "missile_stealth": 2,
-            "target_defense": 1
+            "target_defense": 1,
+            "reason": "Path is safe"
         },
         {
-            "from": "Tehran",
+            "from": "Ahvaz",
             "to": "Eilat",
             "path": [
-                "Tehran",
+                "Ahvaz",
                 "Eilat"
             ],
             "damage": 1488,
             "status": "Hit",
             "missile_stealth": 2,
-            "target_defense": 1
+            "target_defense": 1,
+            "reason": "Path is safe"
         },
         {
             "from": "Isfahan",
-            "to": "Jerusalem",
+            "to": "Haifa",
             "path": [
                 "Isfahan",
-                "Jerusalem"
+                "Haifa"
             ],
             "damage": 1488,
             "status": "Hit",
             "missile_stealth": 2,
-            "target_defense": 1
+            "target_defense": 1,
+            "reason": "Path is safe"
         },
         {
             "from": "Isfahan",
@@ -51,19 +54,21 @@
             "damage": 1488,
             "status": "Hit",
             "missile_stealth": 2,
-            "target_defense": 1
+            "target_defense": 1,
+            "reason": "Path is safe"
         },
         {
             "from": "Mashhad",
-            "to": "Jerusalem",
+            "to": "Haifa",
             "path": [
                 "Mashhad",
-                "Jerusalem"
+                "Haifa"
             ],
             "damage": 1488,
             "status": "Hit",
             "missile_stealth": 2,
-            "target_defense": 1
+            "target_defense": 1,
+            "reason": "Path is safe"
         },
         {
             "from": "Mashhad",
@@ -75,31 +80,8 @@
             "damage": 1488,
             "status": "Hit",
             "missile_stealth": 2,
-            "target_defense": 1
-        },
-        {
-            "from": "Tabriz",
-            "to": "Jerusalem",
-            "path": [
-                "Tabriz",
-                "Jerusalem"
-            ],
-            "damage": 1488,
-            "status": "Hit",
-            "missile_stealth": 2,
-            "target_defense": 1
-        },
-        {
-            "from": "Tabriz",
-            "to": "Eilat",
-            "path": [
-                "Tabriz",
-                "Eilat"
-            ],
-            "damage": 1488,
-            "status": "Hit",
-            "missile_stealth": 2,
-            "target_defense": 1
+            "target_defense": 1,
+            "reason": "Path is safe"
         }
     ]
 }
