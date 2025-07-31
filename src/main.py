@@ -288,23 +288,24 @@ def main():
     
     total_damage_1 = sum(log.get("damage", 0) for log in attack_log_1)
     successful_1 = len([log for log in attack_log_1 if log.get("damage", 0) > 0])
-    successful_2 = len([log for log in attack_log_2 if log.get("damage", 0) > 0])
-    successful_3 = len([log for log in attack_log_3 if log.get("damage", 0) > 0])
-    successful_4 = len([log for log in attack_log_4 if log.get("damage", 0) > 0])
-    successful_5 = len([log for log in attack_log_5 if log.get("damage", 0) > 0])
+   # successful_2 = len([log for log in attack_log_2 if log.get("damage", 0) > 0])
+   # successful_3 = len([log for log in attack_log_3 if log.get("damage", 0) > 0])
+   # successful_4 = len([log for log in attack_log_4 if log.get("damage", 0) > 0])
+   # successful_5 = len([log for log in attack_log_5 if log.get("damage", 0) > 0])
 
     print(f"Scenario 1: {total_damage_1} damage | {successful_1} successful attacks")
-    print(f"Scenario 2: {total_damage_2} damage | {successful_2} successful attacks")
-    print(f"Scenario 3: {total_damage_3} damage | {successful_3} successful attacks")
-    print(f"Scenario 4: {total_damage_4} damage | {successful_4} successful attacks")
-    print(f"Scenario 5: {total_damage_5} damage | {successful_5} successful attacks")
+   # print(f"Scenario 2: {total_damage_2} damage | {successful_2} successful attacks")
+   # print(f"Scenario 3: {total_damage_3} damage | {successful_3} successful attacks")
+   # print(f"Scenario 4: {total_damage_4} damage | {successful_4} successful attacks")
+   # print(f"Scenario 5: {total_damage_5} damage | {successful_5} successful attacks")
     
     best_scenario = max([
         (total_damage_1, "Scenario 1"), 
-        (total_damage_2, "Scenario 2"), 
-        (total_damage_3, "Scenario 3"),
-        (total_damage_4, "Scenario 4"),
-        (total_damage_5, "Scenario 5")], 
+       # (total_damage_2, "Scenario 2"), 
+       # (total_damage_3, "Scenario 3"),
+       # (total_damage_4, "Scenario 4"),
+       # (total_damage_5, "Scenario 5")
+       ], 
         key=lambda x: x[0])
     
     print(f"\n Best Performing Scenario: {best_scenario[1]} ({best_scenario[0]} damage)")
