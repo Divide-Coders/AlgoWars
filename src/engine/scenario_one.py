@@ -152,3 +152,4 @@ def run_scenario(cities, missiles, graph):
         print(f"{log['from']} -> {log['to']} | {log['status']} | Damage: {log['damage']}")
     
     return attack_log                       
+
